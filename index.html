@@ -1,0 +1,89 @@
+---
+layout: default
+title: Главная
+---
+
+<section class="hero">
+    <div class="container">
+        <h1>{{ site.book_title }}</h1>
+        <p class="lead">{{ site.description }}</p>
+        <div class="cta-buttons">
+            <a href="{{ '/book' | relative_url }}" class="cta-button">Начать чтение</a>
+            <a href="{{ '/authors' | relative_url }}" class="cta-button secondary">Об авторах</a>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <h2>О книге</h2>
+        <div class="about-content">
+            <div class="book-description">
+                <p>Эта книга представляет собой подробное руководство по современным технологиям избирательных кампаний. В ней рассматриваются ключевые аспекты организации и проведения выборов, от стратегического планирования до тактических решений.</p>
+            </div>
+            <div class="author-info">
+                <h3>Об авторах</h3>
+                <p>Наши авторы - практикующие специалисты с многолетним опытом в области избирательных технологий и политического консалтинга.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.hero h1 {
+    font-size: 0.83rem;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about {
+    padding: 4rem 2rem;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 0.67rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+.cta-button.secondary {
+    background: #6c757d;
+}
+
+.cta-button.secondary:hover {
+    background: #5a6268;
+}
+</style> 

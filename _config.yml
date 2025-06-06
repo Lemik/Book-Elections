@@ -1,0 +1,41 @@
+title: "ВЫБОРЫ - Технологии избирательных кампаний"
+book_title: "ВЫБОРЫ - Технологии избирательных кампаний"
+description: "Комплексное руководство по современным технологиям избирательных кампаний"
+baseurl: ""
+url: ""
+
+# Feature flags
+features:
+  testimonials: false
+  newsletter: false
+  blog: false
+  feedback: false
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  chapters:
+    output: true
+    permalink: /chapters/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: "chapter"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md 

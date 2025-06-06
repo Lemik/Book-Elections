@@ -1,0 +1,178 @@
+---
+layout: default
+title: Читать книгу
+---
+
+<section class="book-page">
+    <div class="container">
+        <div class="book-header">
+            <h1>{{ site.book_title }}</h1>
+        </div>
+
+        <div class="book-layout">
+            <nav class="chapter-nav">
+                <h3>Содержание</h3>
+                <ul>
+                    {% assign sorted_chapters = site.chapters | sort: 'order' %}
+                    {% for chapter in sorted_chapters %}
+                        <li>
+                            <a href="#chapter-{{ chapter.order }}" class="chapter-link {% if forloop.first %}active{% endif %}">
+                                {{ chapter.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <div class="book-content">
+                {% for chapter in sorted_chapters %}
+                    <div id="chapter-{{ chapter.order }}" class="chapter">
+                        <h2>{{ chapter.title }}</h2>
+                        {{ chapter.content }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.book-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.book-header h1 {
+    font-size: 0.83rem;
+    margin-bottom: 2rem;
+}
+
+.book-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+.chapter-nav {
+    width: 250px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.chapter-nav h3 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.chapter-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chapter-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.chapter-link {
+    display: block;
+    padding: 0.5rem;
+    color: #666;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.chapter-link:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.chapter-link.active {
+    background: #007bff;
+    color: white;
+}
+
+.book-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+.chapter {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.chapter h2 {
+    font-size: 0.67rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.book-content {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .book-layout {
+        flex-direction: column;
+    }
+    
+    .chapter-nav {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chapterLinks = document.querySelectorAll('.chapter-link');
+    const chapters = document.querySelectorAll('.chapter');
+    
+    // Function to update active chapter link
+    function updateActiveChapter() {
+        const scrollPosition = window.scrollY;
+        
+        chapters.forEach((chapter, index) => {
+            const chapterTop = chapter.offsetTop - 100;
+            const chapterBottom = chapterTop + chapter.offsetHeight;
+            
+            if (scrollPosition >= chapterTop && scrollPosition < chapterBottom) {
+                chapterLinks.forEach(link => link.classList.remove('active'));
+                chapterLinks[index].classList.add('active');
+            }
+        });
+    }
+    
+    // Update active chapter on scroll
+    window.addEventListener('scroll', updateActiveChapter);
+    
+    // Update active chapter on click
+    chapterLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetChapter = document.querySelector(targetId);
+            
+            window.scrollTo({
+                top: targetChapter.offsetTop - 20,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Initial update
+    updateActiveChapter();
+});
+</script> 
