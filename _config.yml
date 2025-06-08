@@ -1,8 +1,8 @@
 title: "ВЫБОРЫ - Технологии избирательных кампаний"
 book_title: "ВЫБОРЫ - Технологии избирательных кампаний"
 description: "Комплексное руководство по современным технологиям избирательных кампаний"
-baseurl: ""
-url: ""
+baseurl: "/Book-Elections"
+url: "https://book.lemik.github.io"
 
 # Feature flags
 features:
