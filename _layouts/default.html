@@ -1,309 +1,64 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ page.lang | default: site.default_lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {{ site.book_title }}{% else %}{{ site.book_title }}{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    
-    <!-- SEO Tags -->
-    {% seo %}
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    {% seo %}
 </head>
 <body>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <header>
+        <nav>
 
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <nav class="main-nav">
-                <a href="{{ '/' | relative_url }}" class="logo">{{ site.book_title }}</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="{{ '/book' | relative_url }}">Книга</a></li>
-                    <li><a href="{{ '/authors' | relative_url }}">Авторы</a></li>
-                    <li><a href="{{ '/about' | relative_url }}">О проекте</a></li>
-                    <li><a href="{{ '/donate' | relative_url }}" class="cta-button">Поддержать</a></li>
-                </ul>
-            </nav>
-        </div>
+            <a href="{{ '/about' | relative_url }}">About</a>
+            <div class="language-switcher">
+                <a href="{{ '/uk/' | relative_url }}" class="{% if page.lang == 'uk' %}active{% endif %}">УКР</a>
+                <span class="separator">|</span>
+                <a href="{{ '/ru/' | relative_url }}" class="{% if page.lang == 'ru' %}active{% endif %}">РУС</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="site-content">
+    <main>
         {{ content }}
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>{{ site.book_title }}</h3>
-                    <p>{{ site.description }}</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>Навигация</h4>
-                        <ul>
-                            <li><a href="{{ '/book' | relative_url }}">Книга</a></li>
-                            <li><a href="{{ '/authors' | relative_url }}">Авторы</a></li>
-                            <li><a href="{{ '/about' | relative_url }}">О проекте</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Контакты</h4>
-                        <ul>
-                            <li><a href="mailto:contact@example.com">Связаться с нами</a></li>
-                            <li><a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a></li>
-                            <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; {{ site.time | date: '%Y' }} {{ site.book_title }}. Все права защищены.</p>
-                <div class="footer-legal">
-                    <a href="{{ '/privacy' | relative_url }}">Политика конфиденциальности</a>
-                    <span class="separator">•</span>
-                    <a href="{{ '/terms' | relative_url }}">Условия использования</a>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-
-    <style>
-    /* Header Styles */
-    .site-header {
-        background: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .main-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #333;
-        text-decoration: none;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-    }
-
-    .nav-links a {
-        color: #333;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-        color: #007bff;
-    }
-
-    .nav-links .cta-button {
-        background: #007bff;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-    }
-
-    .nav-links .cta-button:hover {
-        background: #0056b3;
-        color: white;
-    }
-
-    .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-
-    .mobile-menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 2px;
-        background: #333;
-        margin: 5px 0;
-        transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-        .mobile-menu-toggle {
-            display: block;
-        }
-
-        .nav-links {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 1rem;
-            flex-direction: column;
-            gap: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .nav-links.active {
-            display: flex;
-        }
-    }
-
-    /* Footer Styles */
-    .site-footer {
-        background: #f8f9fa;
-        padding: 4rem 0 2rem;
-        margin-top: 4rem;
-        border-top: 1px solid #e9ecef;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        gap: 4rem;
-        margin-bottom: 3rem;
-    }
-
-    .footer-brand {
-        flex: 1;
-        max-width: 400px;
-    }
-
-    .footer-brand h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: #333;
-    }
-
-    .footer-brand p {
-        color: #666;
-        line-height: 1.6;
-    }
-
-    .footer-links {
-        display: flex;
-        gap: 4rem;
-    }
-
-    .footer-section h4 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        color: #333;
-    }
-
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-section ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .footer-section ul li a {
-        color: #666;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .footer-section ul li a:hover {
-        color: #007bff;
-    }
-
-    .footer-bottom {
-        padding-top: 2rem;
-        border-top: 1px solid #e9ecef;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #666;
-        font-size: 0.9rem;
-    }
-
-    .footer-legal {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .footer-legal a {
-        color: #666;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .footer-legal a:hover {
-        color: #007bff;
-    }
-
-    .separator {
-        color: #dee2e6;
-    }
-
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .footer-links {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .footer-bottom {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-    }
-    </style>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
-    });
-    </script>
 </body>
-</html> 
+</html>
+
+<style>
+.book-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #333;
+}
+
+.language-switcher {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #666;
+    padding: 5px 10px;
+}
+
+.language-switcher a.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.language-switcher .separator {
+    color: #ccc;
+    margin: 0 5px;
+}
+</style> 

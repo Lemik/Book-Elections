@@ -1,0 +1,183 @@
+---
+layout: default
+---
+
+<article class="chapter-content">
+    <div class="chapter-navigation">
+        {% assign posts = site[page.collection] | sort: 'date' %}
+        {% for post in posts %}
+            {% if post.url == page.url %}
+                {% assign prev_index = forloop.index0 | minus: 1 %}
+                {% assign next_index = forloop.index0 | plus: 1 %}
+                {% if prev_index >= 0 %}
+                    {% assign prev_post = posts[prev_index] %}
+                {% endif %}
+                {% if next_index < posts.size %}
+                    {% assign next_post = posts[next_index] %}
+                {% endif %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="nav-links">
+            {% if prev_post %}
+                <a href="{{ prev_post.url | relative_url }}" class="prev-chapter">
+                    <span class="nav-arrow">←</span>
+                    <span class="nav-text">{{ prev_post.title }}</span>
+                </a>
+            {% endif %}
+            {% if next_post %}
+                <a href="{{ next_post.url | relative_url }}" class="next-chapter">
+                    <span class="nav-text">{{ next_post.title }}</span>
+                    <span class="nav-arrow">→</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="chapter-header">
+        <h1>{{ page.title }}</h1>
+        <div class="chapter-meta">
+            <span class="chapter-date">{{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+    </div>
+
+    <div class="chapter-body">
+        {{ content }}
+    </div>
+
+    <div class="chapter-footer">
+        <div class="chapter-navigation">
+            <div class="nav-links">
+                {% if prev_post %}
+                    <a href="{{ prev_post.url | relative_url }}" class="prev-chapter">
+                        <span class="nav-arrow">←</span>
+                        <span class="nav-text">{{ prev_post.title }}</span>
+                    </a>
+                {% endif %}
+                {% if next_post %}
+                    <a href="{{ next_post.url | relative_url }}" class="next-chapter">
+                        <span class="nav-text">{{ next_post.title }}</span>
+                        <span class="nav-arrow">→</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</article>
+
+<style>
+.chapter-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.chapter-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.chapter-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.chapter-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.chapter-body {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.chapter-body p {
+    margin-bottom: 1.5rem;
+}
+
+.chapter-body h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: #222;
+}
+
+.chapter-body h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    color: #333;
+}
+
+.chapter-body blockquote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid #666;
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+.chapter-navigation {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev-chapter, .next-chapter {
+    text-decoration: none;
+    color: #666;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.prev-chapter:hover, .next-chapter:hover {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.nav-arrow {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+}
+
+.nav-text {
+    font-size: 0.9rem;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chapter-content {
+        padding: 1rem;
+    }
+
+    .chapter-header h1 {
+        font-size: 2rem;
+    }
+
+    .chapter-body {
+        font-size: 1.1rem;
+    }
+
+    .nav-text {
+        max-width: 150px;
+    }
+}
+</style> 

@@ -1,0 +1,110 @@
+---
+layout: default
+title: Книга
+lang: ru
+---
+
+<div class="book-container">
+    <header class="book-header">
+        <div class="language-switcher">
+            <a href="{{ '/uk/' | relative_url }}">УКР</a>
+            <span class="separator">|</span>
+            <a href="{{ '/ru/' | relative_url }}" class="active">РУС</a>
+            <span class="separator">|</span>
+            <a href="{{ '/ru/about' | relative_url }}">О книге</a>
+        </div>
+        <h1>{{ site.title }}</h1>
+        <p class="book-description">Место, где каждый может прийти и почитать</p>
+    </header>
+
+    <div class="table-of-contents">
+        <h2>Содержание</h2>
+        <nav class="chapters">
+            {% assign ru_posts = site.ru_posts | sort: 'date' %}
+            {% for post in ru_posts %}
+            <div class="chapter-item">
+                <a href="{{ post.url | relative_url }}" class="chapter-link">
+
+                    <span class="chapter-title">{{ post.title }}</span>
+                </a>
+            </div>
+            {% endfor %}
+        </nav>
+    </div>
+</div>
+
+<style>
+.book-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.book-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.language-switcher {
+    margin-bottom: 2rem;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #666;
+    padding: 5px 10px;
+}
+
+.language-switcher a.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.language-switcher .separator {
+    color: #ccc;
+    margin: 0 5px;
+}
+
+.book-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.table-of-contents {
+    margin: 2rem 0;
+}
+
+.chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chapter-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.chapter-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.chapter-link {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.chapter-number {
+    color: #666;
+    margin-right: 1rem;
+}
+
+.chapter-title {
+    font-weight: 500;
+}
+</style> 
