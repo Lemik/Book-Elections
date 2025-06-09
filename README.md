@@ -1,99 +1,99 @@
-# Markdown Guide
+# Посібник з Markdown
 
-## Table of Contents
-- [Basic Syntax](#basic-syntax)
-- [Text Formatting](#text-formatting)
-- [Lists](#lists)
-- [Links and Images](#links-and-images)
-- [Code Blocks](#code-blocks)
-- [Tables](#tables)
-- [Blockquotes](#blockquotes)
-- [Horizontal Rules](#horizontal-rules)
-- [Task Lists](#task-lists)
-- [Footnotes](#footnotes)
-- [Emoji](#emoji)
-- [Advanced Features](#advanced-features)
+## Зміст
+- [Базовий синтаксис](#базовий-синтаксис)
+- [Форматування тексту](#форматування-тексту)
+- [Списки](#списки)
+- [Посилання та зображення](#посилання-та-зображення)
+- [Блоки коду](#блоки-коду)
+- [Таблиці](#таблиці)
+- [Цитати](#цитати)
+- [Горизонтальні лінії](#горизонтальні-лінії)
+- [Списки завдань](#списки-завдань)
+- [Виноски](#виноски)
+- [Емодзі](#емодзі)
+- [Розширені можливості](#розширені-можливості)
 
-## Basic Syntax
+## Базовий синтаксис
 
-### Headers
+### Заголовки
 ```markdown
-# H1 Header
-## H2 Header
-### H3 Header
-#### H4 Header
-##### H5 Header
-###### H6 Header
+# Заголовок H1
+## Заголовок H2
+### Заголовок H3
+#### Заголовок H4
+##### Заголовок H5
+###### Заголовок H6
 ```
 
-### Paragraphs
+### Параграфи
 ```markdown
-This is a paragraph. It's separated from other paragraphs by blank lines.
+Це параграф. Він відокремлений від інших параграфів порожніми рядками.
 
-This is another paragraph.
+Це інший параграф.
 ```
 
-## Text Formatting
+## Форматування тексту
 
-### Emphasis
+### Наголос
 ```markdown
-*Italic text* or _Italic text_
-**Bold text** or __Bold text__
-***Bold and italic*** or ___Bold and italic___
-~~Strikethrough~~
+*Курсивний текст* або _Курсивний текст_
+**Жирний текст** або __Жирний текст__
+***Жирний курсив*** або ___Жирний курсив___
+~~Закреслений текст~~
 ```
 
-### Inline Code
+### Вбудований код
 ```markdown
-Use `code` in your text
+Використовуйте `код` у вашому тексті
 ```
 
-## Lists
+## Списки
 
-### Unordered Lists
+### Марковані списки
 ```markdown
-- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
-- Item 3
+- Елемент 1
+- Елемент 2
+  - Піделемент 2.1
+  - Піделемент 2.2
+- Елемент 3
 
-* Alternative bullet
-* Another item
+* Альтернативний маркер
+* Інший елемент
 ```
 
-### Ordered Lists
+### Нумеровані списки
 ```markdown
-1. First item
-2. Second item
-   1. Subitem 2.1
-   2. Subitem 2.2
-3. Third item
+1. Перший елемент
+2. Другий елемент
+   1. Піделемент 2.1
+   2. Піделемент 2.2
+3. Третій елемент
 ```
 
-## Links and Images
+## Посилання та зображення
 
-### Links
+### Посилання
 ```markdown
-[Link text](https://www.example.com)
-[Link with title](https://www.example.com "Title text")
-[Reference link][reference]
+[Текст посилання](https://www.example.com)
+[Посилання з заголовком](https://www.example.com "Текст заголовку")
+[Посилання-посилання][reference]
 
 [reference]: https://www.example.com
 ```
 
-### Images
+### Зображення
 ```markdown
-![Alt text](image.jpg)
-![Alt text](image.jpg "Image title")
-![Reference image][image-ref]
+![Альтернативний текст](image.jpg)
+![Альтернативний текст](image.jpg "Заголовок зображення")
+![Посилання на зображення][image-ref]
 
 [image-ref]: image.jpg
 ```
 
-## Code Blocks
+## Блоки коду
 
-### Fenced Code Blocks
+### Блоки коду з роздільниками
 ````markdown
 ```javascript
 function hello() {
@@ -102,7 +102,7 @@ function hello() {
 ```
 ````
 
-### Syntax Highlighting
+### Підсвічування синтаксису
 ````markdown
 ```python
 def hello():
@@ -110,155 +110,155 @@ def hello():
 ```
 ````
 
-### Inline Code
+### Вбудований код
 ```markdown
-Use `code` in your text
+Використовуйте `код` у вашому тексті
 ```
 
-## Tables
+## Таблиці
 
-### Basic Table
+### Базова таблиця
 ```markdown
-| Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
-| Cell 1   | Cell 2   | Cell 3   |
-| Cell 4   | Cell 5   | Cell 6   |
+| Заголовок 1 | Заголовок 2 | Заголовок 3 |
+|-------------|-------------|-------------|
+| Комірка 1   | Комірка 2   | Комірка 3   |
+| Комірка 4   | Комірка 5   | Комірка 6   |
 ```
 
-### Aligned Table
+### Вирівняна таблиця
 ```markdown
-| Left-aligned | Center-aligned | Right-aligned |
-|:-------------|:--------------:|--------------:|
-| Left         | Center         | Right         |
+| Вирівняно вліво | Вирівняно по центру | Вирівняно вправо |
+|:----------------|:-------------------:|-----------------:|
+| Вліво           | По центру           | Вправо           |
 ```
 
-## Blockquotes
+## Цитати
 
-### Basic Blockquote
+### Базова цитата
 ```markdown
-> This is a blockquote
-> It can span multiple lines
+> Це цитата
+> Вона може займати кілька рядків
 ```
 
-### Nested Blockquotes
+### Вкладені цитати
 ```markdown
-> First level
->> Second level
->>> Third level
+> Перший рівень
+>> Другий рівень
+>>> Третій рівень
 ```
 
-## Horizontal Rules
+## Горизонтальні лінії
 ```markdown
 ---
 ***
 ___
 ```
 
-## Task Lists
+## Списки завдань
 ```markdown
-- [x] Completed task
-- [ ] Pending task
-- [ ] Another task
+- [x] Виконане завдання
+- [ ] Незавершене завдання
+- [ ] Інше завдання
 ```
 
-## Footnotes
+## Виноски
 ```markdown
-Here's a sentence with a footnote. [^1]
+Ось речення з виноскою. [^1]
 
-[^1]: This is the footnote.
+[^1]: Це виноска.
 ```
 
-## Emoji
+## Емодзі
 ```markdown
 :smile: :heart: :thumbsup:
 ```
 
-## Advanced Features
+## Розширені можливості
 
-### Definition Lists
+### Списки визначень
 ```markdown
-Term 1
-: Definition 1
+Термін 1
+: Визначення 1
 
-Term 2
-: Definition 2a
-: Definition 2b
+Термін 2
+: Визначення 2a
+: Визначення 2b
 ```
 
-### Escaping Characters
+### Екранування символів
 ```markdown
-\* Asterisk
-\` Backtick
-\# Hash
+\* Зірочка
+\` Зворотний апостроф
+\# Решітка
 ```
 
-### HTML in Markdown
+### HTML у Markdown
 ```markdown
 <div style="color: blue;">
-  This is HTML in Markdown
+  Це HTML у Markdown
 </div>
 ```
 
-### Math Equations (if supported)
+### Математичні формули (якщо підтримуються)
 ```markdown
-Inline math: $E = mc^2$
+Вбудована формула: $E = mc^2$
 
-Block math:
+Блок формули:
 $$
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
 $$
 ```
 
-### Diagrams (if supported)
+### Діаграми (якщо підтримуються)
 ````markdown
 ```mermaid
 graph TD
-    A[Start] --> B{Is it?}
-    B -- Yes --> C[OK]
-    B -- No --> D[End]
+    A[Початок] --> B{Чи так?}
+    B -- Так --> C[OK]
+    B -- Ні --> D[Кінець]
 ```
 ````
 
-## Best Practices
+## Найкращі практики
 
-1. **Consistency**: Use consistent formatting throughout your document
-2. **Spacing**: Add blank lines between sections for better readability
-3. **Lists**: Use proper indentation for nested lists
-4. **Links**: Use reference-style links for better maintainability
-5. **Images**: Always include alt text for accessibility
-6. **Code**: Specify language for syntax highlighting
-7. **Tables**: Align columns for better readability
-8. **Headers**: Use proper hierarchy (don't skip levels)
+1. **Узгодженість**: Використовуйте послідовне форматування у всьому документі
+2. **Відступи**: Додавайте порожні рядки між розділами для кращої читабельності
+3. **Списки**: Використовуйте правильні відступи для вкладених списків
+4. **Посилання**: Використовуйте посилання-посилання для кращої підтримки
+5. **Зображення**: Завжди включайте альтернативний текст для доступності
+6. **Код**: Вказуйте мову для підсвічування синтаксису
+7. **Таблиці**: Вирівнюйте стовпці для кращої читабельності
+8. **Заголовки**: Використовуйте правильну ієрархію (не пропускайте рівні)
 
-## Tips and Tricks
+## Поради та хитрощі
 
-- Use `<!-- comment -->` for HTML comments in Markdown
-- Use `&nbsp;` for non-breaking spaces
-- Use `&copy;` for special characters
-- Use `[TOC]` for automatic table of contents (if supported)
-- Use `---` for page breaks (if supported)
+- Використовуйте `<!-- коментар -->` для HTML-коментарів у Markdown
+- Використовуйте `&nbsp;` для неразривних пробілів
+- Використовуйте `&copy;` для спеціальних символів
+- Використовуйте `[TOC]` для автоматичного змісту (якщо підтримується)
+- Використовуйте `---` для розриву сторінки (якщо підтримується)
 
-## Common Issues and Solutions
+## Поширені проблеми та їх вирішення
 
-1. **Lists not rendering properly**
-   - Ensure proper spacing before list items
-   - Use consistent bullet points
+1. **Списки не відображаються правильно**
+   - Переконайтеся у правильних відступах перед елементами списку
+   - Використовуйте послідовні маркери
 
-2. **Code blocks not formatting**
-   - Check for proper backtick placement
-   - Ensure language specification is correct
+2. **Блоки коду не форматується**
+   - Перевірте правильність розміщення зворотних апострофів
+   - Переконайтеся у правильному вказанні мови
 
-3. **Tables not aligning**
-   - Verify pipe characters are properly placed
-   - Check alignment syntax in header row
+3. **Таблиці не вирівнюються**
+   - Перевірте правильність розміщення символів вертикальної риски
+   - Перевірте синтаксис вирівнювання у рядку заголовка
 
-4. **Images not displaying**
-   - Verify image path is correct
-   - Check for proper syntax
+4. **Зображення не відображаються**
+   - Перевірте правильність шляху до зображення
+   - Перевірте правильність синтаксису
 
-## Additional Resources
+## Додаткові ресурси
 
-- [Markdown Guide](https://www.markdownguide.org/)
+- [Посібник з Markdown](https://www.markdownguide.org/)
 - [GitHub Flavored Markdown](https://github.github.com/gfm/)
 - [CommonMark](https://commonmark.org/)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
+- [Шпаргалка з Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
