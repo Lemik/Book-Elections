@@ -1,10 +1,10 @@
 ---
 layout: chapter
-title: "Подготовка кандидата"
-date: 2025-05-05
-author: ""
+title: "Глава 4: Подготовка кандидата"
+date: 2024-01-05
+categories: chapter
 lang: ru
-order: 4
+collection: ru_posts
 ---
 
 ## ГЛАВА ЧЕТВЕРТАЯ

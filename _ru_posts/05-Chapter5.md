@@ -1,10 +1,10 @@
 ---
 layout: chapter
-title: "Информационная Волна"
-date: 2025-05-06
-author: ""
+title: "Глава 5: Информационная Волна"
+date: 2024-01-06
+categories: chapter
 lang: ru
-order: 5
+collection: ru_posts
 ---
 
 ## ГЛАВА ПЯТАЯ

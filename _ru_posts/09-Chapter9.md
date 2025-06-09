@@ -1,7 +1,10 @@
 ---
 layout: chapter
-title: "Встречи с избирателями"
-order: 9
+title: "Глава 9: Встречи с избирателями"
+date: 2024-01-10
+categories: chapter
+lang: ru
+collection: ru_posts
 ---
 ## ГЛАВА ДЕВЯТАЯ
 

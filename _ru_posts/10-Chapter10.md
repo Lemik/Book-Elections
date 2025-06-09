@@ -1,7 +1,10 @@
 ---
 layout: chapter
-title: "День выборов"
-order: 10
+title: "Глава 10: День выборов"
+date: 2024-01-11
+categories: chapter
+lang: ru
+collection: ru_posts
 ---
 
 ## ГЛАВА ДЕСЯТАЯ

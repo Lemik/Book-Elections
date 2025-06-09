@@ -1,10 +1,10 @@
 ---
 layout: chapter
-title: "Штаб кампании"
-date: 2025-05-07
-author: ""
+title: "Глава 6: Штаб кампании"
+date: 2024-01-07
+categories: chapter
 lang: ru
-order: 6
+collection: ru_posts
 ---
 
 ## ГЛАВА ШЕСТАЯ

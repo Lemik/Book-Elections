@@ -1,8 +1,10 @@
 ---
 layout: chapter
-title: "Конкуренты и союзники"
+title: "Глава 7: Конкуренты и союзники"
+date: 2024-01-08
+categories: chapter
 lang: ru
-order: 6
+collection: ru_posts
 ---
 ## ГЛАВА СЕДЬМАЯ
 

@@ -19,17 +19,12 @@ plugins:
 
 # Collections
 collections:
-  chapters:
+  uk_posts:
     output: true
-    permalink: /chapters/:title/
-
-# Default front matter
-defaults:
-  - scope:
-      path: ""
-      type: "chapters"
-    values:
-      layout: "chapter"
+    permalink: /uk/:title/
+  ru_posts:
+    output: true
+    permalink: /ru/:title/
 
 # Exclude from processing
 exclude:

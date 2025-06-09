@@ -1,7 +1,10 @@
 ---
 layout: chapter
-title: "Добровольцы и агитаторы"
-order: 8
+title: "Глава 8: Добровольцы и агитаторы"
+date: 2024-01-09
+categories: chapter
+lang: ru
+collection: ru_posts
 ---
 ## ГЛАВА ВОСЬМАЯ
 

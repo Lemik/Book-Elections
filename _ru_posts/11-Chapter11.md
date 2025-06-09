@@ -1,7 +1,10 @@
 ---
 layout: chapter
 title: "Реклама и список литературы"
-order: 11
+date: 2024-01-12
+categories: chapter
+lang: ru
+collection: ru_posts
 ---
 
 Список литературы:

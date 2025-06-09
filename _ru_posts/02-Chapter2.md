@@ -1,10 +1,10 @@
 ---
 layout: chapter
-title: "Исходные характеристики"
-date: 2025-05-03
-author: ""
+title: "Глава 2: Исходные характеристики"
+date: 2024-01-03
+categories: chapter
 lang: ru
-order: 2
+collection: ru_posts
 ---
 
 ## ГЛАВА ВТОРАЯ
