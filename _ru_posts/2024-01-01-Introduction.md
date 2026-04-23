@@ -1,13 +1,13 @@
 ---
 layout: chapter
-title: "Вступ"
+title: "Введение"
 date: 2024-01-01
 categories: chapter
 lang: ru
 collection: ru_posts
 ---
 
-# Вступ
+# Введение
 
 ## Что такое избирательные технологии?
 
