@@ -10,6 +10,14 @@ title: About
     </header>
 
     <div class="language-options">
+        <a href="{{ '/en/about' | relative_url }}" class="language-card">
+            <div class="language-content">
+                <h2>English</h2>
+                <p>About the project in English</p>
+                <span class="arrow">→</span>
+            </div>
+        </a>
+
         <a href="{{ '/uk/about' | relative_url }}" class="language-card">
             <div class="language-content">
                 <h2>Українська</h2>

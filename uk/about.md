@@ -9,9 +9,13 @@ lang: uk
         <div class="language-switcher">
             <a href="{{ '/uk/' | relative_url }}">УКР</a>
             <span class="separator">|</span>
+            <a href="{{ '/en/' | relative_url }}">ENG</a>
+            <span class="separator">|</span>
             <a href="{{ '/ru/' | relative_url }}">РУС</a>
             <span class="separator">|</span>
             <a href="{{ '/uk/about' | relative_url }}" class="active">Про книгу</a>
+            <span class="separator">|</span>
+            <a href="{{ '/en/about' | relative_url }}">About (EN)</a>
         </div>
         <h1>Про книгу</h1>
     </header>
@@ -34,7 +38,7 @@ lang: uk
 
         <section class="about-section">
             <h2>Зворотній зв'язок</h2>
-            <p>Ми завжди відкриті до ваших пропозицій та коментарів. Якщо у вас є ідеї щодо покращення нашого проекту, будь ласка, зв'яжіться з нами.</p>
+            <p>Ми завжди відкриті до ваших пропозицій та коментарів. Якщо у вас є ідеї щодо покращення нашого проекту, будь ласка, зв'яжіться з нами. Email для контактів: <a href="mailto:ElectionsBook@dushyn.com">ElectionsBook@dushyn.com</a>.</p>
         </section>
     </div>
 </div>

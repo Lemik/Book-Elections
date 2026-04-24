@@ -14,6 +14,8 @@
 
             <a href="{{ '/about' | relative_url }}">About</a>
             <div class="language-switcher">
+                <a href="{{ '/en/' | relative_url }}" class="{% if page.lang == 'en' %}active{% endif %}">ENG</a>
+                <span class="separator">|</span>
                 <a href="{{ '/uk/' | relative_url }}" class="{% if page.lang == 'uk' %}active{% endif %}">УКР</a>
                 <span class="separator">|</span>
                 <a href="{{ '/ru/' | relative_url }}" class="{% if page.lang == 'ru' %}active{% endif %}">РУС</a>
@@ -32,33 +34,3 @@
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
-
-<style>
-.book-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-right: 20px;
-    color: #333;
-}
-
-.language-switcher {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.language-switcher a {
-    text-decoration: none;
-    color: #666;
-    padding: 5px 10px;
-}
-
-.language-switcher a.active {
-    color: #000;
-    font-weight: bold;
-}
-
-.language-switcher .separator {
-    color: #ccc;
-    margin: 0 5px;
-}
-</style> 
