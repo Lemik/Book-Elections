@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {{ site.book_title }}{% else %}{{ site.book_title }}{% endif %}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | xml_escape }}" href="{{ '/feed.xml' | absolute_url }}">
+    {% assign __p = page.url %}
+    {% if __p == '/' or __p == '/index.html' or __p == '/ru/' or __p == '/ru/index.html' or __p == '/uk/' or __p == '/uk/index.html' or __p == '/en/' or __p == '/en/index.html' %}
+    <link rel="alternate" hreflang="uk" href="{{ '/uk/' | absolute_url }}">
+    <link rel="alternate" hreflang="ru" href="{{ '/ru/' | absolute_url }}">
+    <link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+    {% endif %}
     {% seo %}
 </head>
 <body>
