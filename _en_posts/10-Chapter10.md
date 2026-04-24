@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER TEN
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/10-election-day.svg' | relative_url }}" alt="Ballot box and checklist for election day">
+</figure>
+
 ### Election Day
 
 In principle, you can do nothing on this day, considering that a lot of propaganda work has already been done. But there is nothing you can do during campaigning and a different approach and ensure your victory on this very day.

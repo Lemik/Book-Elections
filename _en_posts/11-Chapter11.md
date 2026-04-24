@@ -37,6 +37,10 @@ The application program “Psychotechnologies in Business” sets itself the tas
 
 ## Structure of training seminars:
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/11-advertising-bibliography.svg' | relative_url }}" alt="Campaign advertising board and bibliography books">
+</figure>
+
 Sales technology
 
 To whom it is addressed: Commercial agents (trade, advertising, real estate), sellers of company stores, heads of trade departments and companies. Objectives of the seminar Sales strategy: how to attract customers, talk about the product, convince them to make a purchase. Overcoming objections, speech techniques and strategies, using non-verbal behavior of the buyer. Effective Communication Strategy

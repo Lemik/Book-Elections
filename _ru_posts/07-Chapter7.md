@@ -8,6 +8,10 @@ collection: ru_posts
 ---
 ## ГЛАВА СЕДЬМАЯ
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/07-competitors-allies.svg' | relative_url }}" alt="Сеть конкурентов и союзников">
+</figure>
+
 ### Конкуренты и союзники
 
 Адам и Ева никогда не любили друг друга...

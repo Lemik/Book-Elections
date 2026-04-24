@@ -8,6 +8,10 @@ collection: uk_posts
 ---
 ## РОЗДІЛ СЬОМИЙ
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/07-competitors-allies.svg' | relative_url }}" alt="Мережа конкурентів і союзників">
+</figure>
+
 ### Конкуренти та союзники
 
 Адам і Єва ніколи не любили одне одного...

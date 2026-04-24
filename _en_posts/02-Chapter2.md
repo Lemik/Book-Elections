@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER TWO
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/02-district-baseline.svg' | relative_url }}" alt="District map with voter baseline markers">
+</figure>
+
 ### Initial characteristics
 
 ## The chapter tells how to start getting acquainted with the district. This is information that no candidate ever fully possesses, but everyone should have. Here we will talk a little about the ways and methods of collecting, searching and analyzing such information.

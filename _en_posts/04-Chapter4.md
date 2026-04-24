@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER FOUR
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/04-candidate-preparation.svg' | relative_url }}" alt="Candidate preparing for public communication">
+</figure>
+
 ### Candidate preparation
 
 In this chapter you will find recommendations on how to competently prepare a candidate for victory. As a rule, all this advice does not make sense, because, firstly, there is simply no time for high-quality preparation of the candidate, secondly, it is almost impossible to change the usual behavior of the candidate and, thirdly, the people who promise you a “win-win campaign” and “universal techniques for winning the electorate” are in fact ordinary charlatans.

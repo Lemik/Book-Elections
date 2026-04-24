@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER THREE
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/03-strategic-planning.svg' | relative_url }}" alt="Strategic planning checklist and chess piece">
+</figure>
+
 Strategic planning
 
 If you think that after reading this chapter you will be able to plan election campaign, then you are too late. Planning must begin long before the election campaign begins.

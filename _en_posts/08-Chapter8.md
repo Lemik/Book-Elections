@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER EIGHT
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/08-volunteers-canvassers.svg' | relative_url }}" alt="Volunteers and canvassers organizing outreach">
+</figure>
+
 ### Volunteers and agitators
 
 It is known that volunteer assistants save time, effort and resources for the election campaign. Although, ultimately, their work costs the candidate more than the work of hired professionals.
