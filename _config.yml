@@ -25,6 +25,11 @@ collections:
   ru_posts:
     output: true
     permalink: /ru/:title/
+  en_posts:
+    output: true
+    permalink: /en/:title/
+
+default_lang: uk
 
 # Exclude from processing
 exclude:

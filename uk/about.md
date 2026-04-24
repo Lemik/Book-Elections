@@ -9,9 +9,13 @@ lang: uk
         <div class="language-switcher">
             <a href="{{ '/uk/' | relative_url }}">УКР</a>
             <span class="separator">|</span>
+            <a href="{{ '/en/' | relative_url }}">ENG</a>
+            <span class="separator">|</span>
             <a href="{{ '/ru/' | relative_url }}">РУС</a>
             <span class="separator">|</span>
             <a href="{{ '/uk/about' | relative_url }}" class="active">Про книгу</a>
+            <span class="separator">|</span>
+            <a href="{{ '/en/about' | relative_url }}">About (EN)</a>
         </div>
         <h1>Про книгу</h1>
     </header>

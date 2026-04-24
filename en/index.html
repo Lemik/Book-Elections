@@ -1,32 +1,31 @@
 ---
 layout: default
-title: Книга
-lang: ru
+title: Book
+lang: en
 ---
 
 <div class="book-container">
     <header class="book-header">
         <div class="language-switcher">
-            <a href="{{ '/en/' | relative_url }}">ENG</a>
+            <a href="{{ '/en/' | relative_url }}" class="active">ENG</a>
             <span class="separator">|</span>
             <a href="{{ '/uk/' | relative_url }}">УКР</a>
             <span class="separator">|</span>
-            <a href="{{ '/ru/' | relative_url }}" class="active">РУС</a>
+            <a href="{{ '/ru/' | relative_url }}">РУС</a>
             <span class="separator">|</span>
-            <a href="{{ '/ru/about' | relative_url }}">О книге</a>
+            <a href="{{ '/en/about' | relative_url }}">About</a>
         </div>
         <h1>{{ site.title }}</h1>
-        <p class="book-description">Место, где каждый может прийти и почитать</p>
+        <p class="book-description">Election campaign technologies — read online</p>
     </header>
 
     <div class="table-of-contents">
-        <h2>Содержание</h2>
-        <nav class="chapters">
-            {% assign ru_posts = site.ru_posts | sort: 'date' %}
-            {% for post in ru_posts %}
+        <h2>Contents:</h2>
+         <nav class="chapters">
+            {% assign en_posts = site.en_posts | sort: 'date' %}
+            {% for post in en_posts %}
             <div class="chapter-item">
                 <a href="{{ post.url | relative_url }}" class="chapter-link">
-
                     <span class="chapter-title">{{ post.title }}</span>
                 </a>
             </div>
@@ -77,6 +76,12 @@ lang: ru
     margin: 2rem 0;
 }
 
+.en-toc-note {
+    color: #666;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
 .chapters {
     display: flex;
     flex-direction: column;
@@ -101,12 +106,7 @@ lang: ru
     color: inherit;
 }
 
-.chapter-number {
-    color: #666;
-    margin-right: 1rem;
-}
-
 .chapter-title {
     font-weight: 500;
 }
-</style> 
+</style>
