@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER NINE
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/09-voter-meetings.svg' | relative_url }}" alt="Candidate meeting with voters">
+</figure>
+
 ### Meetings with voters
 
 

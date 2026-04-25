@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER SEVEN
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/07-competitors-allies.svg' | relative_url }}" alt="Network of competitors and allies">
+</figure>
+
 ### Competitors and allies
 
 Adam and Eve never loved each other...

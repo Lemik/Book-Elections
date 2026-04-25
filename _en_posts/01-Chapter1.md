@@ -14,6 +14,10 @@ collection: en_posts
 
 # Chapter One
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/01-election-campaign.svg' | relative_url }}" alt="Megaphone and campaign platform for an election campaign">
+</figure>
+
 ## Election campaign
 
 One of the Kyiv journalists noted that if the last elections in Russia were held under the slogan: “Vote, or you lose,” then the next elections in Ukraine will be held under the slogan: “Vote, or your neighbor wins!”

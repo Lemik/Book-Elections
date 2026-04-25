@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER FIVE
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/05-information-wave.svg' | relative_url }}" alt="Information wave spreading through campaign channels">
+</figure>
+
 ### Information Wave
 
 Definitely a useful chapter for your election campaign, since you will spend the lion's share of your budget on the activities described in it. Moreover, the larger the election campaign scale, the

@@ -2,7 +2,9 @@ title: "ВЫБОРЫ - Технологии избирательных камп�
 book_title: "ВЫБОРЫ - Технологии избирательных кампаний"
 description: "Комплексное руководство по современным технологиям избирательных кампаний"
 baseurl: "/Book-Elections"
-url: "https://book.lemik.github.io"
+url: "https://dushyn.com"
+lang: uk
+title_separator: " · "
 
 # Feature flags
 features:
@@ -16,6 +18,14 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Per-path defaults (SEO / language)
+defaults:
+  - scope:
+      path: "about.md"
+    values:
+      lang: en
+      description: "About the book on election campaign technologies — choose English, Ukrainian, or Russian."
 
 # Collections
 collections:

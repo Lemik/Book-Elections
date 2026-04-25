@@ -14,6 +14,10 @@ collection: en_posts
 
 ## CHAPTER SIX
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/06-campaign-headquarters.svg' | relative_url }}" alt="Campaign headquarters coordination board">
+</figure>
+
 ### Campaign Headquarters
 
 The point of all staff activities is to relieve the candidate as much as possible in order to give him the opportunity to communicate with voters. We present here the most detailed model of the organizational structure, and the minimum model of the headquarters may consist of a candidate and one or two of his assistants. In this case, they distribute the functions described here among themselves.

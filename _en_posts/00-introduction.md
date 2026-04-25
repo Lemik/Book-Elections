@@ -15,6 +15,10 @@ collection: en_posts
 
 # Introduction
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/00-introduction.svg' | relative_url }}" alt="Connected election campaign technology system">
+</figure>
+
 ## What are election campaign technologies?
 
 Election campaign technologies are the body of methods, techniques, and tools used to organize and run election campaigns. They include strategic planning, electorate analysis, communication strategy, agitation and outreach, and much more.

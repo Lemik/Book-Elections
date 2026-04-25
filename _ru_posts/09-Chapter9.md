@@ -8,6 +8,10 @@ collection: ru_posts
 ---
 ## ГЛАВА ДЕВЯТАЯ
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/09-voter-meetings.svg' | relative_url }}" alt="Кандидат встречается с избирателями">
+</figure>
+
 ### Встречи с избирателями
 
 

@@ -9,6 +9,10 @@ collection: uk_posts
 
 ## РОЗДІЛ ДЕВ'ЯТИЙ
 
+<figure class="chapter-figure">
+  <img src="{{ '/assets/images/chapters/09-voter-meetings.svg' | relative_url }}" alt="Кандидат зустрічається з виборцями">
+</figure>
+
 ### Зустрічі з виборцями
 
 Як би ваш кандидат не намагався уникати зустрічей, він усе одно десь зустрінеться з виборцями.

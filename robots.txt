@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dushyn.com/Book-Elections/sitemap.xml
