@@ -1,0 +1,34 @@
+{% comment %}
+  Params:
+    collection_key — en_posts, uk_posts, or ru_posts
+    lang_code — en, uk, or ru (matches labels in _data/book-toc-phases.yml)
+{% endcomment %}
+{% assign posts_sorted = site[include.collection_key] | sort: 'date' %}
+{% assign phases_data = site.data.book-toc-phases %}
+{% assign lang_code = include.lang_code %}
+
+<div class="toc-phases">
+  {% for phase_id in phases_data.order %}
+    {% assign phase_dates = phases_data.dates[phase_id] %}
+    {% assign phase_label = phases_data.labels[lang_code][phase_id] %}
+    <section class="toc-phase" aria-labelledby="toc-phase-{{ phase_id }}-{{ lang_code }}">
+      <h3 class="toc-phase-heading" id="toc-phase-{{ phase_id }}-{{ lang_code }}">{{ phase_label }}</h3>
+      <nav class="chapters toc-phase-chapters" aria-label="{{ phase_label }}">
+        {% for d in phase_dates %}
+          {% assign d_norm = d | append: '' %}
+          {% for post in posts_sorted %}
+            {% assign post_d = post.date | date: '%Y-%m-%d' %}
+            {% if post_d == d_norm %}
+              <div class="chapter-item">
+                <a href="{{ post.url | relative_url }}" class="chapter-link">
+                  <span class="chapter-title">{{ post.title }}</span>
+                </a>
+              </div>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </nav>
+    </section>
+  {% endfor %}
+</div>

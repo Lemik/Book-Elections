@@ -15,16 +15,73 @@
     {% seo %}
 </head>
 <body>
-    <header>
-        <nav>
+    {% assign current_lang = page.lang | default: site.default_lang %}
+    {% case current_lang %}
+        {% when 'en' %}
+            {% assign contents_label = 'Contents' %}
+            {% assign about_label = 'About' %}
+            {% assign home_label = 'Home' %}
+            {% assign contents_url = '/en/' %}
+            {% assign about_url = '/en/about' %}
+        {% when 'ru' %}
+            {% assign contents_label = 'Содержание' %}
+            {% assign about_label = 'О книге' %}
+            {% assign home_label = 'Главная' %}
+            {% assign contents_url = '/ru/' %}
+            {% assign about_url = '/ru/about' %}
+        {% else %}
+            {% assign contents_label = 'Зміст' %}
+            {% assign about_label = 'Про книгу' %}
+            {% assign home_label = 'Головна' %}
+            {% assign contents_url = '/uk/' %}
+            {% assign about_url = '/uk/about' %}
+    {% endcase %}
 
-            <a href="{{ '/about' | relative_url }}">About</a>
-            <div class="language-switcher">
-                <a href="{{ '/en/' | relative_url }}" class="{% if page.lang == 'en' %}active{% endif %}">ENG</a>
+    {% assign en_lang_url = '/en/' %}
+    {% assign uk_lang_url = '/uk/' %}
+    {% assign ru_lang_url = '/ru/' %}
+    {% if page.date %}
+        {% assign page_day = page.date | date: '%Y-%m-%d' %}
+        {% for p in site.en_posts %}
+            {% assign pd = p.date | date: '%Y-%m-%d' %}
+            {% if pd == page_day %}
+                {% assign en_lang_url = p.url %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        {% for p in site.uk_posts %}
+            {% assign pd = p.date | date: '%Y-%m-%d' %}
+            {% if pd == page_day %}
+                {% assign uk_lang_url = p.url %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        {% for p in site.ru_posts %}
+            {% assign pd = p.date | date: '%Y-%m-%d' %}
+            {% if pd == page_day %}
+                {% assign ru_lang_url = p.url %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+    {% elsif page.url contains '/about' %}
+        {% assign en_lang_url = '/en/about' %}
+        {% assign uk_lang_url = '/uk/about' %}
+        {% assign ru_lang_url = '/ru/about' %}
+    {% endif %}
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="site-brand" href="{{ '/' | relative_url }}">{{ home_label }}</a>
+            <div class="site-nav-links">
+                <a href="{{ contents_url | relative_url }}" class="{% if page.url == contents_url %}active{% endif %}">{{ contents_label }}</a>
+                <a href="{{ about_url | relative_url }}" class="{% if page.url == about_url %}active{% endif %}">{{ about_label }}</a>
+            </div>
+            <div class="language-switcher" aria-label="Language selector">
+                <a href="{{ en_lang_url | relative_url }}" class="{% if current_lang == 'en' %}active{% endif %}">ENG</a>
                 <span class="separator">|</span>
-                <a href="{{ '/uk/' | relative_url }}" class="{% if page.lang == 'uk' %}active{% endif %}">УКР</a>
+                <a href="{{ uk_lang_url | relative_url }}" class="{% if current_lang == 'uk' %}active{% endif %}">УКР</a>
                 <span class="separator">|</span>
-                <a href="{{ '/ru/' | relative_url }}" class="{% if page.lang == 'ru' %}active{% endif %}">РУС</a>
+                <a href="{{ ru_lang_url | relative_url }}" class="{% if current_lang == 'ru' %}active{% endif %}">РУС</a>
             </div>
         </nav>
     </header>

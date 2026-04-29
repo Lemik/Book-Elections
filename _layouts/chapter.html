@@ -2,38 +2,39 @@
 layout: default
 ---
 
-<article class="chapter-content">
-    <div class="chapter-navigation">
-        {% assign posts = site[page.collection] | sort: 'date' %}
-        {% for post in posts %}
-            {% if post.url == page.url %}
-                {% assign prev_index = forloop.index0 | minus: 1 %}
-                {% assign next_index = forloop.index0 | plus: 1 %}
-                {% if prev_index >= 0 %}
-                    {% assign prev_post = posts[prev_index] %}
-                {% endif %}
-                {% if next_index < posts.size %}
-                    {% assign next_post = posts[next_index] %}
-                {% endif %}
-                {% break %}
-            {% endif %}
-        {% endfor %}
+{% assign posts = site[page.collection] | sort: 'date' %}
+{% for post in posts %}
+    {% if post.url == page.url %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+        {% if prev_index >= 0 %}
+            {% assign prev_post = posts[prev_index] %}
+        {% endif %}
+        {% if next_index < posts.size %}
+            {% assign next_post = posts[next_index] %}
+        {% endif %}
+        {% break %}
+    {% endif %}
+{% endfor %}
 
-        <div class="nav-links">
-            {% if prev_post %}
-                <a href="{{ prev_post.url | relative_url }}" class="prev-chapter">
-                    <span class="nav-arrow">←</span>
-                    <span class="nav-text">{{ prev_post.title }}</span>
-                </a>
-            {% endif %}
-            {% if next_post %}
-                <a href="{{ next_post.url | relative_url }}" class="next-chapter">
-                    <span class="nav-text">{{ next_post.title }}</span>
-                    <span class="nav-arrow">→</span>
-                </a>
-            {% endif %}
-        </div>
-    </div>
+{% case page.lang %}
+    {% when 'en' %}
+        {% assign bc_contents_label = 'Contents' %}
+        {% assign contents_url = '/en/' %}
+    {% when 'ru' %}
+        {% assign bc_contents_label = 'Содержание' %}
+        {% assign contents_url = '/ru/' %}
+    {% else %}
+        {% assign bc_contents_label = 'Зміст' %}
+        {% assign contents_url = '/uk/' %}
+{% endcase %}
+
+<article class="chapter-content">
+    <nav class="chapter-breadcrumb" aria-label="Chapter location">
+        <a href="{{ contents_url | relative_url }}">{{ bc_contents_label }}</a>
+        <span class="breadcrumb-sep">/</span>
+        <span aria-current="page">{{ page.title }}</span>
+    </nav>
 
     <div class="chapter-header">
         <h1>{{ page.title }}</h1>
@@ -43,7 +44,7 @@ layout: default
         {{ content }}
     </div>
 
-    <div class="chapter-footer">
+    <footer class="chapter-footer">
         <div class="chapter-navigation">
             <div class="nav-links">
                 {% if prev_post %}
@@ -60,5 +61,5 @@ layout: default
                 {% endif %}
             </div>
         </div>
-    </div>
+    </footer>
 </article>

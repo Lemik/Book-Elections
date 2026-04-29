@@ -1,5 +1,10 @@
 title: "ВЫБОРЫ - Технологии избирательных кампаний"
 book_title: "ВЫБОРЫ - Технологии избирательных кампаний"
+# Visible `<h1>` on language index pages (site.title stays canonical / SEO elsewhere).
+localized_book_title:
+  en: "Election campaign technologies"
+  uk: "ВИБОРИ — технології виборчих кампаній"
+  ru: "ВЫБОРЫ — технологии избирательных кампаний"
 description: "Комплексное руководство по современным технологиям избирательных кампаний"
 baseurl: "/Book-Elections"
 url: "https://dushyn.com"
