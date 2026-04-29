@@ -1,0 +1,52 @@
+# Chapter grouping by publication date (aligned across en_posts / uk_posts / ru_posts).
+# Order determines display sequence on language index pages.
+order:
+  - foundations
+  - strategy
+  - communication
+  - organization
+  - political_environment
+  - final_stage
+
+dates:
+  foundations:
+    - 2024-01-01
+    - 2024-01-02
+    - 2024-01-03
+  strategy:
+    - 2024-01-04
+    - 2024-01-05
+  communication:
+    - 2024-01-06
+  organization:
+    - 2024-01-07
+    - 2024-01-09
+  political_environment:
+    - 2024-01-08
+    - 2024-01-10
+  final_stage:
+    - 2024-01-11
+    - 2024-01-12
+
+labels:
+  en:
+    foundations: Foundations
+    strategy: Strategy
+    communication: Communication
+    organization: Organization
+    political_environment: Political environment
+    final_stage: Final stage
+  uk:
+    foundations: Основи
+    strategy: Стратегія
+    communication: Комунікація
+    organization: Організація
+    political_environment: Політичне середовище
+    final_stage: Фінальний етап
+  ru:
+    foundations: Основы
+    strategy: Стратегия
+    communication: Коммуникация
+    organization: Организация
+    political_environment: Политическая среда
+    final_stage: Финальный этап
