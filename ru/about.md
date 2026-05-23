@@ -20,6 +20,15 @@ lang: ru
 
     <div class="about-content">
         <section class="about-section">
+            <h2>Авторы</h2>
+            <ul class="authors-list">
+                {% for author in site.authors %}
+                <li>{{ author }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="about-section">
             <h2>О проекте</h2>
             <p>Эта книга является результатом совместной работы авторов, которые хотят поделиться своими мыслями и опытом. Мы верим, что знания должны быть доступны всем, независимо от языка или географического расположения.</p>
         </section>
