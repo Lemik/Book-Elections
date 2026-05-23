@@ -1,0 +1,15 @@
+{% if site.authors.size > 0 %}
+{% assign authors_lang = include.lang | default: page.lang | default: site.default_lang %}
+{% case authors_lang %}
+  {% when 'en' %}
+    {% assign authors_label = 'Authors' %}
+  {% when 'ru' %}
+    {% assign authors_label = 'Авторы' %}
+  {% else %}
+    {% assign authors_label = 'Автори' %}
+{% endcase %}
+<p class="book-authors{% if include.class %} {{ include.class }}{% endif %}">
+  <span class="book-authors-label">{{ authors_label }}:</span>
+  <span class="book-authors-names">{{ site.authors | join: ', ' }}</span>
+</p>
+{% endif %}

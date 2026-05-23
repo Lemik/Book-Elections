@@ -20,6 +20,15 @@ lang: en
 
     <div class="about-content">
         <section class="about-section">
+            <h2>Authors</h2>
+            <ul class="authors-list">
+                {% for author in site.authors %}
+                <li>{{ author }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="about-section">
             <h2>About the project</h2>
             <p>This site publishes <em>Elections: Technologies of election campaigns</em> — a structured handbook on running election campaigns. The complete book text is available in Ukrainian and Russian; English pages currently offer navigation and pointers to those editions.</p>
         </section>

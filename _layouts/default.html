@@ -90,7 +90,8 @@
         {{ content }}
     </main>
 
-    <footer>
+    <footer class="site-footer">
+        {% include book-authors.html lang=current_lang class="site-footer-authors" %}
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </footer>
 

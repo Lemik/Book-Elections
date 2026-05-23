@@ -22,6 +22,15 @@ lang: uk
 
     <div class="about-content">
         <section class="about-section">
+            <h2>Автори</h2>
+            <ul class="authors-list">
+                {% for author in site.authors %}
+                <li>{{ author }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="about-section">
             <h2>Про проект</h2>
             <p>Ця книга є результатом спільної роботи авторів, які хочуть поділитися своїми думками та досвідом. Ми віримо, що знання повинні бути доступними для всіх, незалежно від мови чи географічного розташування.</p>
         </section>

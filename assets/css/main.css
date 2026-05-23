@@ -285,6 +285,45 @@ footer {
     white-space: nowrap;
 }
 
+.book-authors {
+    margin: 0 auto 1.5rem;
+    max-width: 42rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.book-authors-label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.book-header .book-authors {
+    text-align: center;
+}
+
+.site-footer-authors {
+    margin-bottom: 0.35rem;
+}
+
+.site-footer .book-authors-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.15rem;
+}
+
+.authors-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #555;
+}
+
+.authors-list li + li {
+    margin-top: 0.35rem;
+}
+
 .book-intro {
     margin: 0 auto 2rem;
     max-width: 42rem;
